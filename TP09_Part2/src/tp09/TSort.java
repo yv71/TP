@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp.thread;
+package tp09;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -23,6 +23,10 @@ public abstract class TSort implements Runnable {
 
     private Color bgColor = new Color(255, 255, 204);
     private Color fgColor = Color.RED;
+
+    public ArrayList<Integer> getTab() {
+        return tab;
+    }
     
     public TSort(ArrayList<Integer> tab) {
         this.tab = tab;
