@@ -5,6 +5,7 @@
  */
 package tp09;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 
 /**
@@ -16,18 +17,23 @@ public class TSelectionSort extends TSort{
     public TSelectionSort(ArrayList<Integer> tab) {
         super(tab);
     }
+
+    public TSelectionSort(ArrayList<Integer> tab, Graphics gfx, int w, int h) {
+        super(tab, gfx, w, h);
+    }
+    
     
     public void sort(){
-        for (int i = 0; i < tab.size() - 1; i++){
+        for (int i = 0; i < tab.size() -2; i++){
             int min = i;
             for (int j = i+1; j<tab.size();j++){
                 if (tab.get(j)<tab.get(min)) {
                     min = j;
-                }
+                }}
                 if (min != i){
-                    swap(i,min);
+                    super.swap(i,min);
                 }
             }
         }
     }
-}
+

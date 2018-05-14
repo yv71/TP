@@ -5,6 +5,7 @@
  */
 package tp09;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 
 /**
@@ -16,6 +17,10 @@ public class TQuickSort extends TSort{
     public TQuickSort(ArrayList<Integer> tab) {
         super(tab);
     }
+
+    public TQuickSort(ArrayList<Integer> tab, Graphics gfx, int w, int h) {
+        super(tab, gfx, w, h);
+    }
     
     public void sort(){
         tri_rapide(0,tab.size()-1);
@@ -23,7 +28,7 @@ public class TQuickSort extends TSort{
     private int partitioner(int premier, int dernier, int pivot){
         swap(pivot,dernier);
         int j = premier;
-        for (int i = premier;i < dernier -2;i++){
+        for (int i = premier;i < dernier ;i++){
             if (tab.get(i)<= tab.get(dernier)){
                 swap(i,j);
                 j+= 1;
