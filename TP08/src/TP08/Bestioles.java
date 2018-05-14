@@ -18,7 +18,7 @@ public class Bestioles {
     
     /**
      * 
-     * @return nimbre d'animaux de la liste
+     * @return nombre d'animaux de la liste
      */
     public int nbAnimaux(){
         return liste.size();
@@ -32,8 +32,8 @@ public class Bestioles {
     /**
      * 
      * @param nom nom de l'animal à ajouter/creer
-     * @param type
-     * @return 
+     * @param type type de l'animal à ajouter/creer
+     * @return l'animal cree
      */
     public Animal ajouteAnimal(String nom, String type){
         Animal bete = Fabrique.cree(nom, type);
@@ -41,6 +41,11 @@ public class Bestioles {
         return bete;
     }
     
+    /**
+     * 
+     * @param bete
+     * @return 
+     */
    public boolean animalPresent (Animal bete){
        boolean test = false;
        for (Animal b : liste){
