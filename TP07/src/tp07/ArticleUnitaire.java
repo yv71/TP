@@ -9,6 +9,33 @@ package tp07;
  *
  * @author Beelzed
  */
-public class ArticleUnitaire {
+abstract class ArticleUnitaire extends Article{
+
+
+        private String marque;
+        private double pu;
+        private String descriptif;
     
+      public ArticleUnitaire(String marque, double pu, String descriptif, String reference) {
+         super(reference);
+          this.marque = marque;
+          this.pu = pu;
+          this.descriptif = descriptif;
+      }
+      
+          public String getMarque() {
+        return marque;
+    }
+
+    public double getPU() {
+        return pu;
+    }
+
+    public String getDescriptif() {
+        return descriptif;
+    } 
+      
+   
+      
+   
 }

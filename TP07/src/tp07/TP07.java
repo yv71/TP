@@ -15,7 +15,12 @@ public class TP07 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Facture Oskour = new Facture("jean", "aimarre");
+        Stylo Rouge1 = new Stylo("Bic", 0.20,"Stylo Rouge", "ALED");
+        Stylo Rouge2 = new Stylo("Bic", 0.20,"Stylo Rouge", "ALED");
+        Oskour.addArticle(Rouge1);
+        Oskour.addArticle(Rouge2);
+        System.out.println(Oskour);
     }
     
 }

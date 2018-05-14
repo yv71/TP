@@ -11,7 +11,6 @@ package tp07;
  */
 abstract class Article {
 
-
     private String reference;
 
     public Article(String reference) {
@@ -24,8 +23,12 @@ abstract class Article {
     
     abstract String getMarque();
     
+    public String getReference(){
+        return this.reference;
+    }
+    
     public String toString(){
-        return "Reference : " + reference + " Descriptif : " + this.getDescriptif()+ " Prix Unitaire : " + this.getPU() + " Marque : " + this.getMarque();
+        return this.getDescriptif() + " " + this.getMarque() + " " + this.getPU() + " € " + "Reference : " + this.getReference();
     }
     
 }
