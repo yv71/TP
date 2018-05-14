@@ -21,11 +21,18 @@ public class Facture {
         this.nom = nom;
         this.prenom = prenom;
     }
-    
+    /**
+     * methode permettant l'ajout d'un article au panier
+     * @param a article à ajouter au panier
+     */
     public void addArticle(Article a){
         liste.add(a);
     }
     
+    /**
+     * méthode permettant de retirer un article du panier (s'il est présent)
+     * @param a article à retirer du panier
+     */
     public void removeArticle (Article a){
         if (liste.contains(a)){
             liste.remove(a);
@@ -41,7 +48,7 @@ public class Facture {
             System.out.println(a);
             total += a.getPU();
         }
-        return "Commande de " + nom + " "+ prenom + " total du panier : " + total + " €";        
+        return "Commande de " + prenom + " "+ nom + " total du panier : " + total + " €";        
     }
     
     

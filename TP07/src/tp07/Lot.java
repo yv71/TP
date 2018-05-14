@@ -22,27 +22,33 @@ public class Lot extends Article{
         this.pourcentage = pourcentage;
     }
     
-
-
-
-    public String getDescriptif() {
-        return this.article.getDescriptif();
-    }
-
-
+    /**
+     * 
+     * @return le prix du lot(la remise ayant été effectuée)
+     */
     public double getPU() {
         double total = nb*article.getPU();
         double remise = total * pourcentage / 100;
        return (total-remise);
     }
 
-
+/**
+ * 
+ * @return la marque de l'article du lot
+ */
     public String getMarque() {
         return article.getMarque();
     }
     
     public String toString(){
         return "Lot de " + nb + " " + article.getDescriptif() + " " + article.getPU() + " €, total avec remise de " + pourcentage + " % : " + this.getPU() + " €";
+    }
+/**
+ * 
+ * @return le descriptif de l'article du lot
+ */
+    String getDescriptif() {
+        return article.getDescriptif();
     }
     
 }
