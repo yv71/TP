@@ -24,10 +24,17 @@ public class Bestioles {
         return liste.size();
     }
     
+    
     public String toString(){
         return liste.toString();
     }
     
+    /**
+     * 
+     * @param nom nom de l'animal à ajouter/creer
+     * @param type
+     * @return 
+     */
     public Animal ajouteAnimal(String nom, String type){
         Animal bete = Fabrique.cree(nom, type);
         liste.add(bete);
@@ -35,7 +42,14 @@ public class Bestioles {
     }
     
    public boolean animalPresent (Animal bete){
-       return liste.contains(bete);
+       boolean test = false;
+       for (Animal b : liste){
+           if (bete.donneEspece()==b.donneEspece() && bete.donneNom()==b.donneNom()){
+               test = true;
+           }
+           
+       }
+       return test;
    }
    
    public void enleveAnimal(int numero){

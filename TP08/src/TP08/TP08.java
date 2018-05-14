@@ -16,10 +16,11 @@ public class TP08 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        SPA Dijon = new SPA("Dijon");
         Bestioles bestioles = new Bestioles();
-        bestioles.ajouteAnimal("Felix", "Vautour");
+        bestioles.ajouteAnimal("Felix", "Chat");
         System.out.println(bestioles);
+        System.out.println(bestioles.nbAnimaux());
+        System.out.println(bestioles.animalPresent(new Chat("Felix")));
         
         
     }
