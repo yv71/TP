@@ -15,6 +15,6 @@ public class Stylo extends ArticleUnitaire {
         super(marque, pu, descriptif, reference);
     }
     
-  
+    
     
 }

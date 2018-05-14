@@ -32,13 +32,17 @@ public class Lot extends Article{
 
     public double getPU() {
         double total = nb*article.getPU();
-        double remise = total * (pourcentage/100);
+        double remise = total * pourcentage / 100;
        return (total-remise);
     }
 
 
     public String getMarque() {
         return article.getMarque();
+    }
+    
+    public String toString(){
+        return "Lot de " + nb + " " + article.getDescriptif() + " " + article.getPU() + " €, total avec remise de " + pourcentage + " % : " + this.getPU() + " €";
     }
     
 }

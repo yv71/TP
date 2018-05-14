@@ -41,7 +41,7 @@ public class Facture {
             System.out.println(a);
             total += a.getPU();
         }
-        return "Total du panier : " + total + " €";        
+        return "Commande de " + nom + " "+ prenom + " total du panier : " + total + " €";        
     }
     
     

@@ -28,7 +28,7 @@ abstract class Article {
     }
     
     public String toString(){
-        return this.getDescriptif() + " " + this.getMarque() + " " + this.getPU() + " € " + "Reference : " + this.getReference();
+        return "1 " + this.getDescriptif() + " " + this.getMarque() + " " + this.getPU() + " € " + "Reference : " + this.getReference();
     }
     
 }

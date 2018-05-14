@@ -16,10 +16,12 @@ public class TP07 {
      */
     public static void main(String[] args) {
         Facture Oskour = new Facture("jean", "aimarre");
-        Stylo Rouge1 = new Stylo("Bic", 0.20,"Stylo Rouge", "ALED");
-        Stylo Rouge2 = new Stylo("Bic", 0.20,"Stylo Rouge", "ALED");
+        Stylo Rouge1 = new Stylo("Bic", 0.20,"Stylo rouge", "ALED");
+        Stylo Rouge2 = new Stylo("Bic", 0.20,"Stylo rouge", "ALED");
+        Lot stBleus = new Lot(new Stylo("Bic", 0.20, "Stylo bleu", "help"),10,10,"bipbip");
         Oskour.addArticle(Rouge1);
         Oskour.addArticle(Rouge2);
+        Oskour.addArticle(stBleus);
         System.out.println(Oskour);
     }
     
