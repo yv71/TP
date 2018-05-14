@@ -23,14 +23,17 @@ abstract class ArticleUnitaire extends Article{
           this.descriptif = descriptif;
       }
       
-          public String getMarque() {
+    @Override
+    public String getMarque() {
         return marque;
     }
 
+    @Override
     public double getPU() {
         return pu;
     }
-
+    
+    @Override
     public String getDescriptif() {
         return descriptif;
     } 
