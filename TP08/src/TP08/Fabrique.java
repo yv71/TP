@@ -26,7 +26,7 @@ public class Fabrique {
             break;
             case "chat" : bete = new Chat(nom);
             break;
-            default : bete = null;
+            default : bete = new Humain(nom);
         }
         return bete;
     }

@@ -22,7 +22,9 @@ public class TBubblleSort extends TSort{
         super(tab, gfx, w, h);
     }
     
-    
+    /**
+     * methode servant à lancer 
+     */
     public void sort(){
             boolean aucun_echange;
             do {

@@ -22,9 +22,18 @@ public class TQuickSort extends TSort{
         super(tab, gfx, w, h);
     }
     
+    
     public void sort(){
         tri_rapide(0,tab.size()-1);
     }
+    
+    /**
+     * méthode utilisée par le tri rapide
+     * @param premier
+     * @param dernier
+     * @param pivot
+     * @return 
+     */
     private int partitioner(int premier, int dernier, int pivot){
         swap(pivot,dernier);
         int j = premier;
@@ -39,6 +48,11 @@ public class TQuickSort extends TSort{
       return j;
     }
     
+    /**
+     * methode de lancement du tri rapide
+     * @param premier
+     * @param dernier 
+     */
     private void tri_rapide(int premier, int dernier){
         if (premier < dernier) {
             int pivot = (premier+dernier)/2;

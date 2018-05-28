@@ -23,11 +23,19 @@ public abstract class TSort implements Runnable {
 
     private Color bgColor = new Color(255, 255, 204);
     private Color fgColor = Color.RED;
-
+    
+    /**
+     * 
+     * @return la liste d'entier du tableau tab;
+     */
     public ArrayList<Integer> getTab() {
         return tab;
     }
     
+    /**
+     * constructeur de la classe
+     * @param tab 
+     */
     public TSort(ArrayList<Integer> tab) {
         this.tab = tab;
         this.gfx = null;
@@ -41,6 +49,11 @@ public abstract class TSort implements Runnable {
         PeindreGfx();
     }
     
+    /**
+     * methode permettant d'échanger deux éléments de tab
+     * @param i index du premier élément
+     * @param j index du second élément
+     */
     public void swap(int i, int j) {
         if (gfx != null) {
             int FI = i;
@@ -66,6 +79,9 @@ public abstract class TSort implements Runnable {
         
     }
     
+    /**
+     * methode permettant de lancer le tri en utilisant l'algo choisi
+     */
     public abstract void sort();
     
     public void run() {

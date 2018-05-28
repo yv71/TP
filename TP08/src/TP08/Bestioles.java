@@ -77,10 +77,22 @@ public class Bestioles implements Serializable {
    
    public Animal retourneAnimal(int i){
        Animal retour = null;
-       if (this.liste.size()+1 == i){
+       if (this.liste.size()-1>= i){
            retour = this.liste.get(i);
        }
        
+       return retour;
+   }
+   
+   public void ajouteAnimal(Animal a){
+       this.liste.add(a);
+   }
+   
+   public Animal retourneLast(){
+       Animal retour = null;
+       if (this.liste.size()>0){
+           retour = this.retourneAnimal(this.nbAnimaux()-1);
+       }
        return retour;
    }
 }
